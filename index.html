@@ -302,5 +302,60 @@
             </div>
         </div>
     </footer>
+        <input class="visually-hidden" type="checkbox" id="modal-toggle" checked>
+        <div class="backdrop">
+            <div class="modal">
+                <label class="modal-close-button" for="modal-toggle" aria-label="Close modal">
+                    <svg class="icon-close" width="32" height="32">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </label>
+                <p class="modal-title">Leave your contacts and we will call you back</p>
+                <form class="modal-form" name="feedback_form" autocomplete="off" novalidate>
+                    <div class="form-field">
+                        <label class="form-label" for="input-name">Name</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-person"></use>
+                            </svg>
+                            <input class="form-input" id="input-name" name="input-name" type="text">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label" for="input-phone">Phone</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-phone"></use>
+                            </svg>
+                            <input class="form-input" id="input-phone" name="input-phone" type="tel">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label" for="input-email">Email</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-email"></use>
+                            </svg>
+                            <input class="form-input" id="input-email" name="input-email" type="email">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label" for="input-comment">Comment</label>
+                        <div class="input-wrapper">
+                            <textarea class="form-input form-textarea" id="input-comment" name="input-comment" rows="4" placeholder="Text input"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-field form-field-checkbox">
+                        <input class="visually-hidden" type="checkbox" id="input-agree" name="input-agree">
+                        <label class="form-checkbox-label" for="input-agree">
+                            <span class="custom-checkbox" aria-hidden="true"></span>
+                            I accept the terms and conditions of the <a class="link-backdrop" href="">Privacy Policy</a> 
+                        </label>
+                    </div>
+                    <button class="send-button" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
 </body>
 </html>
