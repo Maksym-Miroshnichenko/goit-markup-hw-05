@@ -577,6 +577,63 @@ button {
 
 
 
+.flex-Tel{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.input-subscribe{
+    width: 264px;
+    height: 40px;
+    padding: 16px 18px;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    background: var(--navy-blue);
+    color: var(--navy-blue);
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.5;
+
+    border: 1px solid var(--white);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.button-subscribe{
+    border-radius: 4px;
+    padding: 8px 24px;
+    border: none;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white);
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: var(--iris);
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: var(--font-family);
+    text-align: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-subscribe :hover {
+    background-color: var(--green);
+}
+
+.button-subscribe :focus {
+    background-color: var(--green);
+}
+
+.icon-subscribe{
+    fill: var(--white);
+}
+
+
 .container{
     max-width: 1158px;
     margin: 0 auto;      
@@ -602,6 +659,11 @@ button {
 .input-wrapper input {
   width: 100%;
   padding-left: 40px; 
+}
+
+.input-icon {
+    width: 18px;
+    height: 24px;
 }
 
 .input-wrapper .input-icon {
@@ -632,19 +694,28 @@ button {
     align-items: center;
     justify-content: center;
     padding: 80px 0 8px;
+
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms, visibility 250ms;
 }
 
-#modal-toggle:not(:checked) + .backdrop {
-    display: none;
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .modal {
     position: relative;
     width: 100%;
-    max-width: 584px;
+    max-width: 408px;
     padding: 32px;
     background: var(--white);
-    border-radius: 24px;
+    border-radius: 4px;
     box-shadow: 0 12px 40px rgba(46, 47, 66, 0.16);
 }
 
@@ -678,22 +749,24 @@ button {
 }
 
 .modal-title {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
     color: var(--navy-blue);
+
+    text-align: center;
 }
 
 .modal-form {
     display: grid;
-    gap: 16px;
+    gap: 8px;
 }
 
 .form-field {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 
 .form-label {
@@ -710,37 +783,39 @@ button {
 
 .form-input {
     width: 100%;
-    min-height: 48px;
+    height: 40px;
     padding: 16px 18px;
     border: 1px solid var(--cornflower);
-    border-radius: 12px;
-    background: var(--cloud);
+    border-radius: 4px;
+    background: transparent;
     color: var(--navy-blue);
     font-family: var(--font-family);
     font-size: 16px;
     line-height: 1.5;
+    padding: 8px 16px 8px 38px;
+    border: 1px solid var(--cornflower);
 }
 
 .form-input:focus {
-    outline: 2px solid var(--iris);
-    outline-offset: 2px;
+    border-color: var(--iris);
+    outline: none;
 }
 
 .form-textarea {
     min-height: 120px;
-    resize: vertical;
+    resize: none;
 }
 
 .form-field-checkbox {
     flex-direction: row;
     align-items: flex-start;
-    gap: 12px;
+    gap: 8px;
 }
 
 .form-checkbox-label {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     cursor: pointer;
     font-size: 14px;
     line-height: 1.5;
@@ -757,16 +832,6 @@ button {
     align-items: center;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms ease;
-}
-
-.custom-checkbox::after {
-    content: "";
-    width: 8px;
-    height: 12px;
-    border: solid var(--white);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    opacity: 0;
 }
 
 .link-backdrop{
@@ -801,7 +866,8 @@ input:checked + label > .custom-checkbox::after {
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
+    display: block;
+    margin: 0 auto;
 }
 
 .send-button:hover,

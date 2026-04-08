@@ -300,47 +300,60 @@
                     </li>
                 </ul>
             </div>
+            <div class="div-subscribe">
+                <p class="subscribe">Subcribe</p>
+                <form action="post" method="post" class="form-subscribe">
+                    <div class="flex-Tel">
+                        <input type="text" class="input-subscribe" placeholder="E-mail">
+                        <button class="button-subscribe">Subscribe 
+                            <svg class="icon-subscribe" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-Telegram"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
         <input class="visually-hidden" type="checkbox" id="modal-toggle" checked>
-        <div class="backdrop">
+        <div class="backdrop is-open">
             <div class="modal">
-                <label class="modal-close-button" for="modal-toggle" aria-label="Close modal">
-                    <svg class="icon-close" width="32" height="32">
+                <button class="modal-close-button" type="button" aria-label="Close modal">
+                    <svg class="icon-close" width="8" height="8">
                         <use href="./images/icons.svg#icon-close"></use>
                     </svg>
-                </label>
+                </button>
                 <p class="modal-title">Leave your contacts and we will call you back</p>
                 <form class="modal-form" name="feedback_form" autocomplete="off" novalidate>
                     <div class="form-field">
-                        <label class="form-label" for="input-name">Name</label>
+                        <label for="Name" class="form-label" for="input-name">Name</label>
                         <div class="input-wrapper">
-                            <svg class="input-icon" width="24" height="24">
+                            <svg class="input-icon">
                                 <use href="./images/icons.svg#icon-person"></use>
                             </svg>
                             <input class="form-input" id="input-name" name="input-name" type="text">
                         </div>
                     </div>
                     <div class="form-field">
-                        <label class="form-label" for="input-phone">Phone</label>
+                        <label for="Phone" class="form-label" for="input-phone">Phone</label>
                         <div class="input-wrapper">
-                            <svg class="input-icon" width="24" height="24">
+                            <svg class="input-icon">
                                 <use href="./images/icons.svg#icon-phone"></use>
                             </svg>
                             <input class="form-input" id="input-phone" name="input-phone" type="tel">
                         </div>
                     </div>
                     <div class="form-field">
-                        <label class="form-label" for="input-email">Email</label>
+                        <label for="Email" class="form-label" for="input-email">Email</label>
                         <div class="input-wrapper">
-                            <svg class="input-icon" width="24" height="24">
+                            <svg class="input-icon">
                                 <use href="./images/icons.svg#icon-email"></use>
                             </svg>
                             <input class="form-input" id="input-email" name="input-email" type="email">
                         </div>
                     </div>
                     <div class="form-field">
-                        <label class="form-label" for="input-comment">Comment</label>
+                        <label for="Comment" class="form-label" for="input-comment">Comment</label>
                         <div class="input-wrapper">
                             <textarea class="form-input form-textarea" id="input-comment" name="input-comment" rows="4" placeholder="Text input"></textarea>
                         </div>
@@ -348,7 +361,11 @@
                     <div class="form-field form-field-checkbox">
                         <input class="visually-hidden" type="checkbox" id="input-agree" name="input-agree">
                         <label class="form-checkbox-label" for="input-agree">
-                            <span class="custom-checkbox" aria-hidden="true"></span>
+                            <span class="custom-checkbox">
+                                <svg width="10" height="8">
+                                    <use href="./images/icons.svg#icon-check"></use>
+                                </svg>
+                            </span>
                             I accept the terms and conditions of the <a class="link-backdrop" href="">Privacy Policy</a> 
                         </label>
                     </div>
@@ -356,6 +373,5 @@
                 </form>
             </div>
         </div>
-
 </body>
 </html>
