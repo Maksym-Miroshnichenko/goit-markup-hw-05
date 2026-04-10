@@ -496,6 +496,16 @@ button {
     padding: 100px 0;
 }
 
+
+.footer .container.flex {
+    display: flex;
+    align-items: baseline;
+}
+
+.div-subscribe {
+    margin-left: auto;
+}
+
 .logo-footer{
     font-family: var(--second-family);
     font-weight: 700;
@@ -591,13 +601,22 @@ button {
     border: 1px solid var(--white);
     border-radius: 4px;
     background: var(--navy-blue);
-    color: var(--navy-blue);
+    color: var(--white);
     font-family: var(--font-family);
     font-size: 16px;
     line-height: 1.5;
 
     border: 1px solid var(--white);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.input-subscribe::placeholder{
+    color: var(--white);
+}
+
+.input-subscribe:focus {
+    border-color: var(--iris);
+    outline: none;
 }
 
 .button-subscribe{
@@ -621,11 +640,8 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-subscribe :hover {
-    background-color: var(--green);
-}
-
-.button-subscribe :focus {
+.button-subscribe:hover,
+.button-subscribe:focus {
     background-color: var(--green);
 }
 
@@ -659,11 +675,6 @@ button {
 .input-wrapper input {
   width: 100%;
   padding-left: 40px; 
-}
-
-.input-icon {
-    width: 18px;
-    height: 24px;
 }
 
 .input-wrapper .input-icon {
@@ -727,10 +738,9 @@ button {
     font-size: 18px;
     cursor: pointer;
 
-    border-radius: 4px;
     width: 24px;
     height: 24px;
-    border-radius: 100%;
+    border-radius: 50%;
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.1);
 
@@ -738,7 +748,26 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms, border 250ms;
+
 }
+.icon-close {
+    fill: var(--navy-blue);
+    transition: fill 250ms;
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+    background-color: var(--ocean);
+}
+
+.modal-close-button:hover .icon-close,
+.modal-close-button:focus .icon-close {
+    fill: var(--white);
+}
+
 
 .modal-close-button:focus{
     background-color: var(--ocean);
@@ -749,31 +778,33 @@ button {
 }
 
 .modal-title {
-    margin-bottom: 16px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.2;
-    color: var(--navy-blue);
-
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
     text-align: center;
+    color: var(--navy-blue);
 }
 
 .modal-form {
     display: grid;
-    gap: 8px;
 }
 
 .form-field {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    
 }
 
 .form-label {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--slate);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
 }
 
 .input-wrapper {
@@ -810,6 +841,8 @@ button {
     flex-direction: row;
     align-items: flex-start;
     gap: 8px;
+    margin-top: 8px;
+    
 }
 
 .form-checkbox-label {
@@ -820,18 +853,39 @@ button {
     font-size: 14px;
     line-height: 1.5;
     color: var(--slate);
+
+    margin-top: 16px;
+    margin-bottom: 24px;
 }
 
 .custom-checkbox {
-    width: 20px;
-    height: 20px;
-    border: 1.5px solid var(--slate);
-    border-radius: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid var(--navy-blue-modal);
     background: var(--white);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms ease;
+}
+
+.custom-checkbox svg{
+    opacity: 0;
+    fill: var(--white);
+}
+
+input:checked + label .custom-checkbox svg {
+    opacity: 1;
+}
+
+.check-p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
 }
 
 .link-backdrop{
@@ -868,6 +922,7 @@ input:checked + label > .custom-checkbox::after {
 
     display: block;
     margin: 0 auto;
+    margin-top: 24px;
 }
 
 .send-button:hover,
