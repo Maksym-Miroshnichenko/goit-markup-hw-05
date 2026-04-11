@@ -506,9 +506,8 @@ button {
     margin-bottom: 16px;
 }
 
-.div-subscribe {
-    margin-left: auto;
-}
+
+
 
 .logo-footer{
     font-family: var(--second-family);
@@ -578,11 +577,11 @@ button {
     color: var(--white);
 }
 .f-div-1{
-    margin-right: 120px;
+
 }
 
 .f-div-2{
-    margin-right: 80px;
+
 }
 
 .footer .container.flex {
