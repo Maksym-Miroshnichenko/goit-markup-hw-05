@@ -501,8 +501,7 @@ button {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.04em;
-    text-align: center;
+    letter-spacing: 0.02em;
     color: var(--white);
     margin-bottom: 16px;
 }
@@ -687,7 +686,10 @@ button {
 
 .input-wrapper input {
   width: 100%;
-  padding-left: 40px; 
+}
+
+.modal .form-input {
+    padding-left: 38px;
 }
 
 .input-wrapper .input-icon {
@@ -745,6 +747,11 @@ button {
     padding: 72px 24px 24px 24px;
     border-radius: 4px;
 
+
+    box-shadow:
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .modal-close-button {
@@ -857,18 +864,20 @@ button {
 }
 
 .form-textarea {
-    padding: 8px 16px;     
-    font-size: 12px; /* вместо 16px */
+    height: auto; 
+    font-size: 12px; 
     line-height: 1.17;
     letter-spacing: 0.04em;
     min-height: 120px;
     resize: none;
+    min-height: 120px;
 }
 
 .form-field-checkbox {
     flex-direction: row;
     align-items: flex-start;
     gap: 8px;
+    margin-top: 16px;
 }
 
 .form-checkbox-label {
