@@ -595,7 +595,6 @@ button {
     display: flex;
     align-items: center;
     gap: 24px;
-    margin-top: 16px;
 }
 
 .input-subscribe{
@@ -720,7 +719,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 0 8px;
+
 
 
     opacity: 0;
@@ -889,7 +888,6 @@ button {
     line-height: 1.5;
     color: var(--light-slate);
 
-    margin-top: 16px;
     margin-bottom: 24px;
 }
 
