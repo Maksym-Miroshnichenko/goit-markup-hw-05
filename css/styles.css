@@ -496,6 +496,17 @@ button {
     padding: 100px 0;
 }
 
+.subscribe {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
 .div-subscribe {
     margin-left: auto;
 }
@@ -846,6 +857,10 @@ button {
 }
 
 .form-textarea {
+    padding: 8px 16px;     
+    font-size: 12px; /* вместо 16px */
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     min-height: 120px;
     resize: none;
 }
@@ -854,8 +869,6 @@ button {
     flex-direction: row;
     align-items: flex-start;
     gap: 8px;
-    /* margin-top: 8px; */
-    
 }
 
 .form-checkbox-label {
