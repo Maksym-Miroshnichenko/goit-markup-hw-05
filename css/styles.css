@@ -567,22 +567,19 @@ button {
     margin-bottom: 16px;
     color: var(--white);
 }
-
 .f-div-1{
     margin-right: 120px;
 }
 
-.f-div-1{
+.f-div-2{
     margin-right: 80px;
 }
 
 .footer .container.flex {
     display: flex;
     align-items: baseline;
+    /* gap: 120px; */
 }
-
-
-
 
 .flex-Tel{
     display: flex;
@@ -834,7 +831,8 @@ button {
     border: 1px solid var(--navy-blue-modal);
 }
 
-.form-input:focus {
+.form-input:focus,
+.form-input:hover {
     border-color: var(--iris);
     outline: none;
 }
@@ -868,7 +866,7 @@ button {
 .custom-checkbox {
     border-radius: 2px;
     fill: var(--ocean);
-    border: 1px solid var(--ocean);
+    border: 1px solid var(--navy-blue-modal);
 
     width: 16px;
     height: 16px;
@@ -886,7 +884,9 @@ button {
 
 input:checked + label .custom-checkbox svg {
     opacity: 1;
+    border: 1px solid var(--ocean);
 }
+
 
 .check-p{
     font-family: var(--font-family);
