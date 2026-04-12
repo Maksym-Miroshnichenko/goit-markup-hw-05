@@ -590,6 +590,14 @@ button {
     /* gap: 120px; */
 }
 
+.f-div-1 {
+    margin-right: 120px;
+}
+
+.f-div-2 {
+    margin-right: auto;
+}
+
 .flex-Tel{
     display: flex;
     align-items: center;
@@ -876,6 +884,7 @@ button {
     align-items: flex-start;
     gap: 8px;
     margin-top: 16px;
+    margin-bottom: 24px;
 }
 
 .form-checkbox-label {
@@ -887,7 +896,7 @@ button {
     line-height: 1.5;
     color: var(--light-slate);
 
-    margin-bottom: 24px;
+    margin-bottom: 0;
 }
 
 .custom-checkbox {
